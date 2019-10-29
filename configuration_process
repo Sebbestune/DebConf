@@ -56,7 +56,7 @@ sudo update-alternatives --config java
 
 ./xinit-i3
 
-#Download Command line tools only from: https://developer.android.com/studio
+#Download Command line tools only (for example by using firefox) from: https://developer.android.com/studio
 #It should be called something like sdk-tools-linux-*.zip (example: sdk-tools-linux-4333796.zip)
 
 cd 

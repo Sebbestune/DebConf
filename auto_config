@@ -1,0 +1,46 @@
+#!/bin/bash
+
+echo "Welcome to the automatic setup!"
+
+read -n1 -p "Do you wish to start the full automatic setup? [y, N]?" ans
+case $ans in
+	y|Y)
+	dpkg --add-architecture i386
+	apt update
+
+	apt-get install $(cat installed_packages)
+	apt update
+
+	#add web development and some native development
+	npm install --global vue-native-cli react-native-cli sass
+	
+	# Add more as you need, if you don't know what, then maybe look at this:
+	# https://dev.to/bettercodingacademy/i-m-a-professional-react-developer-and-these-are-the-npm-packages-i-use-the-most-often-4lie
+	
+	# Wine 
+	https://linuxconfig.org/how-to-install-wine-staging-on-debian-10-buster
+	wget -nc https://dl.winehq.org/wine-builds/winehq.key
+	apt-key add winehq.key¨
+	echo "deb https://dl.winehq.org/wine-builds/debian/ buster main" | tee /etc/apt/sources.list.d/wine.list
+	apt update
+	#wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/amd64/libfaudio0_19.10-0~buster_amd64.deb
+	#wget https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/i386/libfaudio0_19.10-0~buster_i386.deb
+	apt-get install libstb0:i386 libstb0
+	dpkg -i libfaudio0_19.10-0~buster_*
+	apt install --install-recommends winehq-staging
+	
+	# and Lutris
+	wget https://download.opensuse.org/repositories/home:/strycore/Debian_9.0/Release.key
+	apt-key add Release.key
+	
+	echo 'deb http://download.opensuse.org/repositories/home:/strycore/Debian_9.0/ ./' | sudo tee /etc/apt/sources.list.d/lutris.list
+	apt update
+	apt install lutris
+	
+	printf "\ndeb \"http://ftp.debian.org/debian\" stretch main\ndeb-src \"http://ftp.de.debian.org/debian\" stretch main\n" | sudo tee -a /etc/apt/sources.list
+	apt update
+	apt install openjdk-8-jdk openjdk-8-jre
+	update-alternatives --config java 
+
+	*) echo "Process terminated."
+esac

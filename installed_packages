@@ -1435,7 +1435,6 @@ logrotate
 lsb-base
 lsb-release
 lsof
-lutris
 m17n-db
 m4
 mailutils
@@ -1721,10 +1720,6 @@ openjdk-11-jdk:amd64
 openjdk-11-jdk-headless:amd64
 openjdk-11-jre:amd64
 openjdk-11-jre-headless:amd64
-openjdk-8-jdk:amd64
-openjdk-8-jdk-headless:amd64
-openjdk-8-jre:amd64
-openjdk-8-jre-headless:amd64
 openssh-client
 openssl
 opus-tools
@@ -1923,7 +1918,6 @@ vorbis-tools
 wamerican
 wget
 whiptail
-wine-stable-amd64
 wireless-regdb
 wireless-tools
 wpasupplicant
