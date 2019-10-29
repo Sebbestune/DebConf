@@ -1,12 +1,11 @@
 #!/bin/bash
 
-cd 
-cd Downloads/
-unzip sdk-tools
-rm sdk-tools-linux-*.zip
+unzip "sdk-tools-linux-*.zip"
+rm "sdk-tools-linux-*.zip"
 sudo mv tools /opt/android-tools
 cd 
 printf "\nexport PATH=/opt/android-tools/:/opt/android-tools/bin:$PATH\n" | tee -a .profile
+export PATH=/opt/android-tools/:/opt/android-tools/bin:$PATH
 touch .android/repositories.cfg
 sdkmanager --no_https --list
 
