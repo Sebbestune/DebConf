@@ -87,6 +87,8 @@ sdkmanager --no_https --list
 
 ## That's it!
 Hopefully you're now all up and running! To give some pointers of where to go next I invite you to check out this video about how to use i3wm (https://youtu.be/j1I63wGcvU4?t=183). Basically you set your MOD-key and then the most important thing to know is that you can create new terminals with MOD-Enter and move between the terminals either with MOD-<direction key> or by focusing with the mouse. You can also put the windows in their own area by MOD-Shift-<number> and then jump between different areas by MOD-<number>. You can exit windows in i3wm by MOD-Shift-q. To shutdown or reboot the entire system when back in terminal mode use "sudo reboot" or "sudo shutdown -h now". To run any of the tools simply write the name of the tool, e.g. writing *lutris* will start lutris and *obs* will start obs. I also included a cool music player called cmus (http://www.tuxarena.com/static/cmus_guide.php). 
+    
+By running the file dpkgscript you can save any future setup into a file called installed_packages, this will then have a list of all your packages installed with apt. The file testcolors is also included so you can see the colors supported by the terminal (just for fun).
   
 Happy Exploring!
 > Sebastian Lindgren
