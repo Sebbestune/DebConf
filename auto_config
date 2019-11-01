@@ -12,7 +12,7 @@ case $ans in
 	apt-get install vim
 	apt update
 
-	npm install --global vue-native-cli react-native-cli sass
+	npm install --global vue-native-cli react-native-cli sass eslint eslint-plugin-unicorn vue vue-chartjs chart.js prettier
 	
 	# Wine 
 	https://linuxconfig.org/how-to-install-wine-staging-on-debian-10-buster
