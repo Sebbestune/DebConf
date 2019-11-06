@@ -12,10 +12,13 @@ case $ans in
 	apt-get install vim
 	apt update
 
-	npm install --global vue-native-cli react-native-cli sass eslint eslint-plugin-unicorn vue vue-chartjs chart.js prettier
+	curl -sL https://deb.nodesource.com/setup_13.x | bash -
+
+	apt-get install nodejs
+	
+	npm install --global vue-native-cli react-native-cli sass eslint eslint-plugin-unicorn vue vue-chartjs chart.js prettier gatsby-cli 
 	
 	# Wine 
-	https://linuxconfig.org/how-to-install-wine-staging-on-debian-10-buster
 	wget -nc https://dl.winehq.org/wine-builds/winehq.key
 	apt-key add winehq.key
 	echo "deb https://dl.winehq.org/wine-builds/debian/ buster main" | tee /etc/apt/sources.list.d/wine.list
