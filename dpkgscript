@@ -1,1 +1,0 @@
-dpkg -l | grep ^ii | awk '{print $2}' > installed_packages

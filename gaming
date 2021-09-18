@@ -1,0 +1,34 @@
+#!/bin/bash
+
+echo "Welcome to the gaming setup!"
+
+read -n1 -p "Do you wish to start the full automatic setup? [y, N]?" ans
+case $ans in
+	y|Y)
+    #Setup
+	dpkg --add-architecture i386
+	apt update
+    # Wine 
+	wget -nc https://dl.winehq.org/wine-builds/winehq.key
+	apt-key add winehq.key
+	echo "deb https://dl.winehq.org/wine-builds/debian/ buster main" | tee /etc/apt/sources.list.d/wine.list
+	apt update
+	apt-get install libstb0:i386 libstb0
+    wget https://github.com/Sebbestune/DebConf/blob/6d0b464ab6d0f95d61ad050910bfc0fbc7a6bf46/libfaudio0_19.10-0~buster_amd64.deb
+    wget https://github.com/Sebbestune/DebConf/blob/6d0b464ab6d0f95d61ad050910bfc0fbc7a6bf46/libfaudio0_19.10-0~buster_i386.deb
+	dpkg -i libfaudio0_19.10-0~buster_*
+	apt install --install-recommends winehq-staging
+	apt update
+	
+	# and Lutris
+	wget https://download.opensuse.org/repositories/home:/strycore/Debian_9.0/Release.key
+	apt-key add Release.key
+	
+	echo 'deb http://download.opensuse.org/repositories/home:/strycore/Debian_9.0/ ./' | tee /etc/apt/sources.list.d/lutris.list
+	apt update
+	apt install lutris
+
+	;;
+
+	*) echo "Process terminated." ;;
+esac

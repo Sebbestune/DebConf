@@ -1,0 +1,24 @@
+
+# Install directives by Sebastian Lindgren
+# 2021-09-14
+# Shutdown once to get effects from keyboard changes: sudo shutdown -h now
+# To run the i3 graphical environment: startx
+# xrandr -s 1920x1200
+
+ apt install i3 i3-wm i3lock i3status xinit xorg xserver-xorg xterm
+ apt install neovim
+# mkdir -p ~/.config/nvim
+ apt install xserver-xorg-video-vesa
+ apt install console-common
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+ apt install ./google-chrome-stable_current_amd64.deb
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+source .bashrc
+nvm install node
+npm install -g pnpm prettier eslint babel-eslint eslint-config-standard eslint-config-standard-react eslint-config-standard-jsx eslint-plugin-react eslint-config-prettier eslint-plugin-prettier ndb tldr typescript fkill vtop
+# xrandr -s 1920x1200
+ apt install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common
+curl -fsSL https://download.docker.com/linux/debian/gpg |  gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" |  tee /etc/apt/sources.list.d/docker.list
+ apt update
+ apt install -y docker-ce docker-ce-cli containerd.io
