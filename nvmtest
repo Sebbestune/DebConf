@@ -1,9 +1,9 @@
-mkdir ~/.cache ~/.config 
+mkdir ~/{.cache,.config}
 mkdir -p ~/.local/share 
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.cache"
+XDG_CONFIG_HOME="$HOME/.config"
+XDG_DATA_HOME="$HOME/.local/share"
+XDG_CACHE_HOME="$HOME/.cache"
 
 printf '
 
@@ -21,7 +21,7 @@ fi
 
 ' >> ~/.profile 
 
-export NVM_DIR="$XDG_CONFIG_HOME/.nvm" && (
+NVM_DIR="$XDG_CONFIG_HOME/.nvm" && (
   git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
   cd "$NVM_DIR"
   git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
