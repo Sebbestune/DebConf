@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# must run as not root
 if [[ $EUID -ne 0 ]]; then
    
     mkdir ~/{.cache,.config}
