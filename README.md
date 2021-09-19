@@ -61,22 +61,11 @@ sudo usermod -a -G sudo <username>
 git clone https://github.com/Sebbestune/DebConf.git
 cd DebConf
 ```
-Then 
 
-1. Replace your .profile with the .profile in the DebConf (or otherwise add XDG directories) 
-2. Add the folders (in home): 
-```
-Run setpreqs or ...
-
-mkdir $HOME/.local/bin
-mkdir $HOME/.config
-mkdir $HOME/.local/share
-mkdir $HOME/.cache
-mkdir $HOME/.runtimes
-```
-3. run the installer:
+Run the setup and then installer:
 
 ```
+./setup
 ./installer
 
 # Then setup your git 
