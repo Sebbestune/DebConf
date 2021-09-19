@@ -5,6 +5,19 @@
 # To run the i3 graphical environment: startx
 # xrandr -s 1920x1200
 
+
+#!/bin/bash
+
+# must run as not root
+if [[ $EUID -ne 0 || XDG_CONFIG_HOME="" ]]; then
+   
+    echo "Please run this after running the setup script and sourcing .profile and .bashrc"
+    echo "Please run this script as root."
+
+   exit 1
+fi
+
+
 # graphics
 apt install i3 i3-wm i3lock i3status xinit xorg xserver-xorg xterm xserver-xorg-video-vesa neovim console-common
 
