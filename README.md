@@ -57,9 +57,7 @@ apt-get install git sudo
 #add yourself to sudoers
 sudo usermod -a -G sudo <username>
 
-#setup your git 
-git config --global user.name "<your name>"
-git config --global user.email <your email>
+# Clone the repo
 git clone https://github.com/Sebbestune/DebConf.git
 cd DebConf
 ```
@@ -78,6 +76,10 @@ mkdir $HOME/.runtimes
 
 ```
 ./installer
+
+# Then setup your git 
+git config --global user.name "<your name>"
+git config --global user.email <your email>
 ```
 
 ##
