@@ -66,6 +66,8 @@ Then
 1. Replace your .profile with the .profile in the DebConf (or otherwise add XDG directories) 
 2. Add the folders (in home): 
 ```
+Run setpreqs or ...
+
 mkdir $HOME/.local/bin
 mkdir $HOME/.config
 mkdir $HOME/.local/share
