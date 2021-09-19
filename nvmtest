@@ -31,7 +31,11 @@ echo "" >> ~/.bashrc
 echo 'export NVM_DIR="$XDG_CONFIG_HOME/.nvm"' >> ~/.bashrc 
 echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm' >> ~/.bashrc 
 
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+
 # To upgrade see "Manual Upgrade" in https://github.com/nvm-sh/nvm
 
 nvm install node
-npm install -g pnpm prettier eslint babel-eslint eslint-config-standard eslint-config-standard-react eslint-config-standard-jsx eslint-plugin-react eslint-config-prettier eslint-plugin-prettier ndb tldr typescript fkill vtop
+/$XDG_CONFIG_HOME/.nvm/versions/node/*/bin/npm install -g pnpm prettier eslint babel-eslint eslint-config-standard eslint-config-standard-react eslint-config-standard-jsx eslint-plugin-react eslint-config-prettier eslint-plugin-prettier ndb tldr typescript fkill vtop
+
+# pnpm should go to XDG in the future https://github.com/pnpm/pnpm/issues/2574
