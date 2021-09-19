@@ -1,7 +1,5 @@
-cd
-
-mkdir .cache .runtimes .config
-mkdir -p .local/{bin,share}
+mkdir ~/.cache ~/.runtimes ~/.config 
+mkdir -p ~/.local/{bin,share}
 
 export NVM_DIR="$XDG_CONFIG_HOME/.nvm" && (
   git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
@@ -9,11 +7,11 @@ export NVM_DIR="$XDG_CONFIG_HOME/.nvm" && (
   git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
 ) && \. "$NVM_DIR/nvm.sh"
 
-echo 'export NVM_DIR="$XDG_CONFIG_HOME/.nvm"' >> .bashrc
-echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm' >> .bashrc
+echo "" >> ~/.bashrc 
+echo 'export NVM_DIR="$XDG_CONFIG_HOME/.nvm"' >> ~/.bashrc 
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm' >> ~/.bashrc 
 
+# To upgrade see "Manual Upgrade" in https://github.com/nvm-sh/nvm
 
 nvm install node
 npm install -g pnpm prettier eslint babel-eslint eslint-config-standard eslint-config-standard-react eslint-config-standard-jsx eslint-plugin-react eslint-config-prettier eslint-plugin-prettier ndb tldr typescript fkill vtop
-
-# To upgrade see "Manual Upgrade" in https://github.com/nvm-sh/nvm
