@@ -19,4 +19,4 @@ if [ -d "$HOME/.cache" ] ; then
     XDG_CACHE_HOME="$HOME/.cache"
 fi
 
-' >> ~/.profile
+' >> ~/.profile 
