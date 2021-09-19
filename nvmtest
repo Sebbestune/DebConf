@@ -1,5 +1,25 @@
-mkdir ~/.cache ~/.runtimes ~/.config 
-mkdir -p ~/.local/{bin,share}
+mkdir ~/.cache ~/.config 
+mkdir -p ~/.local/share 
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+printf '
+
+if [ -d "$HOME/.config" ] ; then
+    XDG_CONFIG_HOME="$HOME/.config"
+fi
+
+if [ -d "$HOME/.local/share" ] ; then
+    XDG_DATA_HOME="$HOME/.local/share"
+fi
+
+if [ -d "$HOME/.cache" ] ; then
+    XDG_CACHE_HOME="$HOME/.cache"
+fi
+
+' >> ~/.profile 
 
 export NVM_DIR="$XDG_CONFIG_HOME/.nvm" && (
   git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
