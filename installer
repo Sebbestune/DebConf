@@ -19,7 +19,10 @@ fi
 
 
 # graphics
-apt install i3 i3-wm i3lock i3status xinit xorg xserver-xorg xterm xserver-xorg-video-vesa neovim console-common
+apt install i3 i3-wm i3lock i3status xinit xorg xserver-xorg xterm 
+apt install xserver-xorg-video-vesa 
+apt install neovim 
+apt install console-common
 
 # google chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
