@@ -71,6 +71,11 @@ Run the setup and then installer:
 # Then setup your git 
 git config --global user.name "<your name>"
 git config --global user.email <your email>
+
+# Then make docker run without sude
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
 ```
 
 ##
