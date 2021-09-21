@@ -20,7 +20,7 @@ fi
 
 # graphics
 apt install i3 i3-wm i3lock i3status xterm 
-apt install neovim 
+apt install neovim cmus
 apt install console-common
 
 # google chrome

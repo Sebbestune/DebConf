@@ -72,7 +72,7 @@ Run the setup and then installer (if for some reason not executable run : "chmod
 git config --global user.name "<your name>"
 git config --global user.email <your email>
 
-# Then make docker run without sude
+# Then make docker run without sudo
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -85,7 +85,11 @@ To change screen resolution run:
 2. E.g. xrandr -s 1920x1200, to change to that resolution.
 
 ## That's it!
-Hopefully you're now all up and running! To give some pointers of where to go next I invite you to check out this video about how to use i3wm (https://youtu.be/j1I63wGcvU4?t=183). Basically you set your MOD-key and then the most important thing to know is that you can create new terminals with MOD-Enter and move between the terminals either with MOD-<direction key> or by focusing with the mouse. You can also put the windows in their own area by MOD-Shift-<number> and then jump between different areas by MOD-<number>. You can exit windows in i3wm by MOD-Shift-q. To shutdown or reboot the entire system when back in terminal mode use "sudo reboot" or "sudo shutdown -h now". To run any of the tools simply write the name of the tool, e.g. writing *lutris* will start lutris and *obs* will start obs. I also included a cool music player called cmus (http://www.tuxarena.com/static/cmus_guide.php). 
+Hopefully you're now all up and running! To give some pointers of where to go next I invite you to check out this video about how to use i3wm (https://youtu.be/j1I63wGcvU4?t=183). 
+
+Basically you set your MOD-key and then the most important thing to know is that you can create new terminals with MOD-Enter and move between the terminals either with MOD-<direction key> or by focusing with the mouse. You can also put the windows in their own area by MOD-Shift-<number> and then jump between different areas by MOD-<number>. You can exit windows in i3wm by MOD-Shift-q. 
+
+To shutdown or reboot the entire system when back in terminal mode use "sudo reboot" or "sudo shutdown -h now". To run any of the tools simply write the name of the tool. (By writing the name directly in a terminal or by writing it in MOD-d) I also included a cool music player called cmus (http://www.tuxarena.com/static/cmus_guide.php). 
   
 Happy Exploring!
 > Sebastian Lindgren
