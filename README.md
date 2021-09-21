@@ -62,7 +62,7 @@ git clone https://github.com/Sebbestune/DebConf.git
 cd DebConf
 ```
 
-Run the setup and then installer:
+Run the setup and then installer (if for some reason not executable run : "chmod 777 setup installer"):
 
 ```
 ./setup
