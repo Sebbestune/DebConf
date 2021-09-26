@@ -93,3 +93,8 @@ To shutdown or reboot the entire system when back in terminal mode use "sudo reb
   
 Happy Exploring!
 > Sebastian Lindgren
+
+#### Interesting articles:
+
+- https://fedoramagazine.org/using-i3-with-multiple-monitors/
+- https://medium.com/geekculture/neovim-configuration-for-beginners-b2116dbbde84
