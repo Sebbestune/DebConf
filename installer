@@ -1,0 +1,40 @@
+
+# Install directives by Sebastian Lindgren
+# 2021-09-14
+# Shutdown once to get effects from keyboard changes: sudo shutdown -h now
+# To run the i3 graphical environment: startx
+# xrandr -s 1920x1200
+
+
+#!/bin/bash
+
+# must run as not root
+if [[ $EUID -ne 0 || XDG_CONFIG_HOME="" ]]; then
+   
+    echo "Please run this after running the setup script and sourcing .profile and .bashrc"
+    echo "Please run this script as root."
+
+   exit 1
+fi
+
+
+# graphics
+apt install i3 i3-wm i3lock i3status xterm 
+apt install python3 python3-pip
+apt install neovim cmus
+apt install console-common
+
+# google chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+apt install ./google-chrome-stable_current_amd64.deb
+
+# docker
+apt install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common
+curl -fsSL https://download.docker.com/linux/debian/gpg |  gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" |  tee /etc/apt/sources.list.d/docker.list
+apt update
+apt install -y docker-ce docker-ce-cli containerd.io
+pip3 install docker-compose
+
+echo "" >> ~/.bashrc 
+echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc 
